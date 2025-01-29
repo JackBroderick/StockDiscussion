@@ -1,0 +1,25 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual environment
+.venv/
+.env/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+stocks.db
+
+# Log files
+*.log
+
+# Node.js
+node_modules/
+
+# General
+*.swp
+.history/
