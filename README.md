@@ -1,4 +1,4 @@
-![StockDiscussion.PNG]()
+![](StockDiscussion.PNG)
 # Stock Discussion App
 
 A full-stack web application built with Flask (backend) and React (frontend) that allows users to view stock data and post discussions about specific stocks. This project uses a SQLite database to store posts related to stock tickers.
