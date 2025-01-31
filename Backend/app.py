@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify
 import sqlite3
+from flask import Flask, request, jsonify
 from flask_cors import CORS 
-
+from financials import get_price
 app = Flask(__name__)
 CORS(app)
 
@@ -42,7 +42,7 @@ def add_post(ticker, content):
 @app.route('/stock/<ticker>', methods=['GET'])
 def get_stock_data(ticker):
     # This is a dummy stock price; you can integrate with yfinance for real data
-    stock_price = 100  # Dummy value
+    stock_price = get_price(ticker)  # Dummy value
     posts = get_posts(ticker)
     return jsonify({"stock_price": stock_price, "posts": posts})
 
