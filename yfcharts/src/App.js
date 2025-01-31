@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 // StockPage Component (discussion thread for a specific ticker)
 function StockPage({ ticker }) {

@@ -65,7 +65,7 @@ def post_comment():
 
     post = add_post(ticker, content)
     response = jsonify({"post": post})
-    
+           
     # Log the response before sending it
     print(f"Returning response: {response.get_data(as_text=True)}")
     
