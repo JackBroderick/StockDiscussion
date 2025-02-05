@@ -1,88 +1,114 @@
-/* General Page Styling */
+/* General page styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.home, .stock-page {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 600px;
+  background-color: #c0c0c0; /* Classic Windows 95 gray */
+  color: black;
+  font-family: Tahoma, Arial, sans-serif;
   text-align: center;
 }
 
-h1, h2, h3 {
-  color: #333;
+/* Windows 95-style title */
+h1 {
+  font-size: 28px;
+  color: black;
+  background-color: #808080;
+  padding: 5px;
+  border: 2px solid white;
+  text-shadow: 1px 1px 0px gray;
+  width: 80%;
+  margin: 20px auto;
 }
 
-/* Search Bar Styling */
+/* Search Bar */
+.search-bar {
+  background: #d4d0c8;
+  border: 2px solid black;
+  padding: 10px;
+  display: inline-block;
+  box-shadow: 3px 3px black;
+}
+
 input[type="text"] {
-  padding: 10px;
-  width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 15px;
-  margin-left: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Stock Discussion Section */
-.stock-page h2 {
-  margin-top: 10px;
-  color: #007bff;
-}
-
-.post {
-  background: #f9f9f9;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.post small {
-  color: #777;
-}
-
-/* New Post Section */
-.new-post {
-  margin-top: 20px;
-}
-
-textarea {
-  width: 100%;
-  height: 80px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 5px;
   font-size: 14px;
-  resize: none;
+  border: 2px inset #808080;
+  background-color: white;
+  color: black;
+  font-family: Tahoma, Arial, sans-serif;
 }
 
-.new-post button {
-  margin-top: 10px;
-  width: 100%;
+/* Windows 95-style buttons */
+button {
+  background: #d4d0c8;
+  border: 2px outset #ffffff;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: Tahoma, Arial, sans-serif;
+  color: black;
+  cursor: pointer;
+  box-shadow: 2px 2px black;
+}
+
+button:active {
+  border: 2px inset #ffffff;
+  box-shadow: none;
+}
+
+/* Stock discussion box */
+.stock-page {
+  background-color: #d4d0c8;
+  border: 2px solid black;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 4px 4px black;
+}
+
+/* Posts */
+.post {
+  background-color: white;
+  border: 2px inset #808080;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Textarea for new post */
+.new-post textarea {
+  width: 80%;
+  height: 60px;
+  background-color: white;
+  color: black;
+  border: 2px inset #808080;
+  padding: 5px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* Stock chart box */
+.chart-container {
+  background-color: white;
+  border: 2px inset #808080;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Windows 95 scrollbars */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border: 2px solid white;
+}
+
+/* Taskbar-style footer */
+footer {
+  background: #808080;
+  border-top: 2px outset white;
+  padding: 10px;
+  color: black;
+  font-size: 12px;
 }

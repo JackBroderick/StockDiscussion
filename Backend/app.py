@@ -1,7 +1,7 @@
 import sqlite3
 from flask import Flask, request, jsonify
 from flask_cors import CORS 
-from financials import get_price
+from financials import get_price, get_historical_data
 app = Flask(__name__)
 CORS(app)
 
@@ -41,10 +41,18 @@ def add_post(ticker, content):
 # API route to get stock data (for simplicity, we're just sending dummy stock price data here)
 @app.route('/stock/<ticker>', methods=['GET'])
 def get_stock_data(ticker):
-    # This is a dummy stock price; you can integrate with yfinance for real data
-    stock_price = get_price(ticker)  # Dummy value
-    posts = get_posts(ticker)
-    return jsonify({"stock_price": stock_price, "posts": posts})
+    try:
+        stock_price = get_price(ticker)
+        historical_data = get_historical_data(ticker, period="5y")  # Fetch 5 years of data
+
+        return jsonify({
+            "stock_price": stock_price,
+            "historical_data": historical_data,
+            "posts": []  # Placeholder for discussion posts
+        })
+    
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # API route to add a new post to a stock ticker
 @app.route('/api/post', methods=['POST'])
@@ -70,6 +78,7 @@ def post_comment():
     print(f"Returning response: {response.get_data(as_text=True)}")
     
     return response, 201
+    
 
 
 if __name__ == '__main__':
