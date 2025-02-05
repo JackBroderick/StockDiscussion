@@ -22,13 +22,11 @@ A full-stack web application built with Flask (backend) and React (frontend) tha
     React
 
 # SETUP
-    1) cd frontend
-    2) python -m venv .venv
-    3) .venv\scripts\activate
-    4) pip install requirements.txt
-    5) npm install     
-    6) npm start
-    7) CD backend            
+    1) python -m venv .venv
+    2) .venv\scripts\activate
+    3) pip install requirements.txt
+    4) npm install     
+    5) npm start          
     8) python createdb.py     #create the database
     9) python app.py
 
