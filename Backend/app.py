@@ -44,11 +44,12 @@ def get_stock_data(ticker):
     try:
         stock_price = get_price(ticker)
         historical_data = get_historical_data(ticker, period="5y")  # Fetch 5 years of data
+        discussion_posts = get_posts(ticker)  # Fetch posts for this ticker
 
         return jsonify({
             "stock_price": stock_price,
             "historical_data": historical_data,
-            "posts": []  # Placeholder for discussion posts
+            "posts": discussion_posts  # Now includes the actual posts
         })
     
     except Exception as e:
